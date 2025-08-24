@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!--Font Awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!--Tailwind CSS CDN Link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Google Font Stylesheet-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <!--Banner-->
+    <Section id="banner" class="flex justify-center gap-20 p-2 bg-black text-white md:text-xl">
+        <h1>Sign Up and <strong> GET 30% OFF </strong> for your first Order </h1>
+        <p id="close" class="cursor-pointer">X</p>
+    </Section>
+
+    <!--Responsive Navbar-->
+    <nav class="flex items-center justify-between p-3 mb-2 md:px-10 sticky top-0 bg-white" style="z-index: 3;">
+        <h1 class="text-2xl font-bold">Nostra</h1>
+
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+
+        <ul class="gap-10 mt-3 text-black text-lg hidden md:flex">
+            <li><a class="hover:underline hover:text-black" href="./index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="./index.html#new-arrival">New Arrival</a></li>
+            <li><a class="hover:underline hover:text-black" href="./index.html#most-wanted">Most Wanted</a></li>
+            <li><a class="hover:underline hover:text-black" href="./collection.html">Collections</a></li>
+            <li><a class="hover:underline hover:text-black" href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navbar -->
+    <section id="sidenav" class="bg-[#1D232C] fixed z-50 top-0 transition-all duration-1000"
+        style="width: 50%; height: 100vh; left: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer text-white">X</p>
+        </div>
+
+        <ul class="flex flex-col gap-10 items-center text-base text-white">
+            <li>
+                <a class="hover:underline hover:text-black" href="./index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./index.html#new-arrival">New Arrival</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./index.html#most-wanted">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./collection.html">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="#">Contact Us</a>
+            </li>
+        </ul>
+    </section>
+
+    <!--Conatct Form-->
+    <div class="p-4 mx-auto max-w-xl bg-white">
+        <h2 class="text-3xl text-slate-900 font-bold">Contact us</h2>
+        <form class="mt-8 space-y-5">
+            <div>
+                <label class='text-sm text-slate-900 font-medium mb-2 block'>Name</label>
+                <input type='text' placeholder='Enter Name' required
+                    class="w-full py-2.5 px-4 text-slate-800 bg-gray-100 border border-gray-200 focus:border-slate-900 focus:bg-transparent text-sm outline-0 transition-all" />
+            </div>
+            <div>
+                <label class='text-sm text-slate-900 font-medium mb-2 block'>Email</label>
+                <input type='email' placeholder='Enter Email' required
+                    class="w-full py-2.5 px-4 text-slate-800 bg-gray-100 border border-gray-200 focus:border-slate-900 focus:bg-transparent text-sm outline-0 transition-all" />
+            </div>
+            <div>
+                <label class='text-sm text-slate-900 font-medium mb-2 block'>Subject</label>
+                <input type='text' placeholder='Enter Subject' required
+                    class="w-full py-2.5 px-4 text-slate-800 bg-gray-100 border border-gray-200 focus:border-slate-900 focus:bg-transparent text-sm outline-0 transition-all" />
+            </div>
+            <div>
+                <label class='text-sm text-slate-900 font-medium mb-2 block'>Message</label>
+                <textarea placeholder='Enter Message' rows="6" required
+                    class="w-full px-4 text-slate-800 bg-gray-100 border border-gray-200 focus:border-slate-900 focus:bg-transparent text-sm pt-3 outline-0 transition-all"></textarea>
+            </div>
+            <div>
+                <button type='submit'
+                    class="text-white bg-black font-medium hover:text-gray-400 tracking-wide text-base px-4 py-2.5 w-full border-0 outline-0 cursor-pointer">Send
+                    message</button>
+            </div>
+        </form>
+    </div>
+
+  <!--News Letter-->
+    <section class="text-center mt-12">
+        <h1 class="text-2xl md:text-4xl font-bold mt-6 text-center">Join our News Letter</h1>
+        <p class="text-lg md:text-3xl">“Subscribe to our email newsletter and unlock early access to offers, news, and members-only perks!”</p>
+        <input type="text" class="border border-black p-2 m-3" style="width: 80%;">
+        <br>
+        <button
+            class="bg-[#1D232C] text-white text-sm md:text-lg font-medium rounded-lg p-3 m-1 mb-5 shadow-xl hover:-translate-y-2">Subscribe
+            <i class="fa-solid fa-arrow-right ml-2"></i>
+        </button>
+    </section>
+
+    <!--Footer-->
+    <section class="bg-[#1D232C] p-10 flex flex-col gap-6 mt-3">
+        <h1 class="text-3xl md:text-5xl font-bold text-white">Nostra</h1>
+        <p class="text-xl md:text-3xl text-white">The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those intrest</p>
+       
+        <p class="text-lg text-white">@2025 Nostra.com</p>
+    </section>
+
+
+    <script src="./contact.js"></script>
+
+</body>
+</html>

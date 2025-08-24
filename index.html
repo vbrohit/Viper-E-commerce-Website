@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!--Link CSS File-->
+    <link rel="stylesheet" href="style.css">
+    <!--Font Awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!--Tailwind CSS CDN Link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Google Font Stylesheet-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    #slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+</style>
+
+<body>
+    <!--Banner-->
+    <Section id="banner" class="flex justify-center gap-20 p-2 bg-black text-white md:text-xl cursor-pointer">
+        <h1>Sign Up and <strong> GET 30% OFF </strong> for your first Order </h1>
+        <p id="close" class="cursor-pointer">X</p>
+    </Section>
+
+    <!--Responsive Navbar-->
+    <nav class="flex items-center justify-between p-3 mb-2 md:px-10 sticky top-0 bg-white z-50">
+        <h1 class="text-3xl font-bold cursor-pointer">Nostra</h1>
+
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <ul class="gap-10 mt-3 text-black text-lg hidden md:flex">
+            <li><a class="hover:underline hover:text-black" href="#">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="#new-arrival">New Arrival</a></li>
+            <li><a class="hover:underline hover:text-black" href="#most-wanted">Most Wanted</a></li>
+            <li><a class="hover:underline hover:text-black" href="./collection.html">Collections</a></li>
+            <li><a class="hover:underline hover:text-black" href="./contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navbar -->
+    <section id="sidenav" class="bg-[#1D232C] fixed z-50 top-0 transition-all duration-1000"
+        style="width: 50%; height: 100vh; left: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer text-white">X</p>
+        </div>
+
+        <ul class="flex flex-col gap-10 items-center text-base text-white">
+            <li><a class="hover:underline hover:text-black" href="#">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="#new-arrival">New Arrival</a></li>
+            <li><a class="hover:underline hover:text-black" href="#most-wanted">Most Wanted</a></li>
+            <li><a class="hover:underline hover:text-black" href="./collection.html">Collections</a></li>
+            <li><a class="hover:underline hover:text-black" href="./contact.html">Contact Us</a></li>
+        </ul>
+    </section>
+    <!-- Slider -->
+    <section>
+        <div class="relative overflow-hidden h-[40%] md:h-[60%]">
+            <!-- Static Text Block [Responsive] -->
+            <div class="absolute top-0 left-0 h-full w-full z-10">
+                <div class="my-auto w-full text-center px-4 ">
+                    <h1
+                        class="text-2xl sm:text-4xl md:text-wrap lg:text-5xl font-bold  text-white leading-tight mt-4 mr-10">
+                        Level Up Your Style</h1>
+                    <h1 class="text-base sm:text-lg md:text-xl text-white font-bold mt-4 mr-10">Limited Edition
+                        Collections</h1>
+                    <button
+                        class="cursor-pointer mt-2 bg-white text-black font-bold text-sm sm:text-base px-2 sm:px-4 py-2 sm:py-3 rounded hover:bg-gray-200 transition -z-10 mr-10">Shop
+                        Now <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                </div>
+            </div>
+            <!-- Slider Image Backgrounds -->
+            <ul id="slider" class="flex w-full h-auto transition delay-150 duration-1000 ease-in-out">
+                <li class="w-full flex-shrink-0">
+                    <img class="w-full h-full object-cover rounded-lg" src="./image/slider-1.jpg" alt="">
+                </li>
+                <li class="w-full flex-shrink-0">
+                    <img class="w-full h-full object-cover rounded-lg" src="./image/funny-tourist-dancing-vacation-pointing-fingers-up-wearing-summer-hat-sunglasses-blue-backgro.jpg" alt="">
+                </li>
+                <li class="w-full flex-shrink-0">
+                    <img class="w-full h-full object-cover rounded-lg" src="./image/slider-4.jpg" alt="">
+                </li>
+            </ul>
+
+            <!-- Arrows -->
+            <div class="absolute px-5 md:px-20 flex h-full w-full top-0 left-0 z-20">
+                <div class="my-auto w-full flex justify-between">
+                    <button onclick="prev()" class="bg-white p-3 rounded-full bg-opacity-80 shadow-lg">
+                        <!-- Left arrow -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <button onclick="next()" class="bg-white p-3 rounded-full bg-opacity-80 shadow-lg">
+                        <!-- Right arrow -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Brands-->
+    <section class="p-3 mt-8">
+        <h1 class="text-2xl font-bold mb-5">Brands</h1>
+
+  
+      
+        <div class="brands">
+            <div class="brands-item">
+                <img class="brands-icon" src="image/puma.png" alt="">
+                <p>Puma</p>
+            </div>
+
+            <div class="brands-item">
+                <img class="brands-icon" src="image/adidas.png" alt="">
+                <p>Adidas</p>
+            </div>
+
+            <div class="brands-item">
+                <img class="brands-icon" src="image/simple.png" alt="">
+                <p>Simple</p>
+            </div>
+
+            <div class="brands-item">
+                <img class="brands-icon" src="image/leaves.png" alt="">
+                <p>Leaves</p>
+            </div>
+
+            <div class="brands-item">
+                <img class="brands-icon" src="image/behance.png" alt="">
+                <p>Behance</p>
+            </div>
+
+            <div class="brands-item">
+                <img class="brands-icon" src="image/twitch.png" alt="">
+                <p>Twitch</p>
+            </div>
+
+            <div class="brands-item">
+                <img class="brands-icon" src="image/leaves.png" alt="">
+                <p>Leaves</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Imf-1-->
+    <section class="flex justify-between mt-12 px-5 gap-12">
+        <div class="flex flex-col gap-1">
+            <h1 class="text-xl md:text-3xl font-bold cursor-pointer">We Provide Best Customer Experiences</h1>
+        </div>
+    </section>
+
+    <!--Imf-2-->
+    
+     <div class="servives-container-2">
+                <div>
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-regular fa-circle-check"></i>
+                    <h4>Original Products</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+
+                <div>
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-regular fa-face-smile"></i>
+                    <h4>Satisfaction Guarantee</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+
+                <div>
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-solid fa-broom"></i>
+                    <h4>New Arrival Everyday</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+
+                <div>
+                    <i style="font-size: 3vw;margin-bottom: 10px;" class="fa-solid fa-truck-fast"></i>
+                    <h4>Fast & Free Shipping</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--New Arrival-->
+    <section id="new-arrival">
+        <h1 class="mt-12 mb-5 px-5 font-bold text-2xl">New Arrivals</h1>
+        <div class="flex flex-wrap md:flex-nowrap justify-between px-5 md:flex-shrink-0 gap-10">
+            <div
+                class="w-[40%] sm:w-[35%] md:w-[200px] lg:w-[250px] relative hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                <img src="./image/n1.jpg" class="w-full rounded-[10px] brightness-60">
+                <button
+                    class="absolute bg-white text-black text-sm md:text-sm lg:text-lg rounded-md top-1/2 left-1/4 px-2 py-1 md:py-2">
+                    Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+            <div
+                class="w-[40%] sm:w-[35%] md:w-[200px] lg:w-[250px] relative hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ">
+                <img src="./image/n2.jpg" class="w-full rounded-[10px] brightness-60">
+                <button
+                    class="absolute bg-white text-black text-sm md:text-sm lg:text-lg rounded-md top-1/2 left-1/4 px-2 py-1 md:py-2">
+                    Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+            <div
+                class="w-[40%] sm:w-[35%] md:w-[200px] lg:w-[250px] relative hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                <img src="./image/n3.jpg" class="w-full rounded-[10px] brightness-60">
+                <button
+                    class="absolute bg-white text-black text-sm md:text-sm lg:text-lg rounded-md top-1/2 left-1/4 px-2 py-1 md:py-2">
+                    Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+            <div
+                class="w-[40%] sm:w-[35%] md:w-[200px] lg:w-[250px] relative hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+                <img src="./image/n4.jpg" class="w-full rounded-[10px] brightness-60">
+                <button
+                    class="absolute bg-white text-black text-sm md:text-sm lg:text-lg rounded-md top-1/2 left-1/4 px-2 py-1 md:py-2">
+                    Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!--Most Wanted-->
+    <section id="most-wanted">
+        <h1 class="mt-12 mb-5 px-5 font-bold text-2xl">Most Wanted</h1>
+        <div class="flex flex-wrap md:flex-nowrap justify-between px-5 md:flex-shrink-0 gap-10">
+            <div
+                class="w-[40%] sm:w-[35%] md:w-[200px] lg:w-[250px] relative hover:shadow-xl transform hover:-translate-y-4 transition duration-300">
+                <img src="./image/mw1.jpg" class="w-full rounded-[10px]">
+                <img class="like-button" src="image/blackheart.png" alt="">
+            </div>
+            <div
+                class="w-[40%] sm:w-[35%] md:w-[200px] lg:w-[250px] relative hover:shadow-xl transform hover:-translate-y-4 transition duration-300">
+                <img src="./image/mw2.jpg" class="w-full rounded-[10px]">
+                <img class="like-button" src="image/blackheart.png" alt="">
+            </div>
+            <div
+                class="w-[40%] sm:w-[35%] md:w-[200px] lg:w-[250px] relative hover:shadow-xl transform hover:-translate-y-4 transition duration-300">
+                <img src="./image/mw3.jpg" class="w-full rounded-[10px]">
+                <img class="like-button" src="image/blackheart.png" alt="">
+            </div>
+            <div
+                class="w-[40%] sm:w-[35%] md:w-[200px] lg:w-[250px] relative hover:shadow-xl transform hover:-translate-y-4 transition duration-300">
+                <img src="./image/mw4.jpg" class="w-full rounded-[10px]">
+                <img class="like-button" src="image/blackheart.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!--Offer-->
+    <section class="flex flex-col md:flex-row bg-[#1D232C] justify-center items-center  px-5 py-2 mt-12 ml-5 md:gap-10">
+        <!-- Image Section -->
+        <div class="w-auto md:w-1/2  p-4">
+            <img src="./image/16284.jpg" alt="Offer" class="w-full h-80  object-cover rounded-md cursor-pointer">
+        </div>
+
+        <!-- Content Section -->
+        <div class="w-full md:w-1/2 p-6 flex flex-col justify-center items-start md:gap-3">
+            <h1 class="text-white text-3xl md:text-5xl font-bold mb-2 cursor-pointer">Limited Offer</h1>
+            <p class="text-white text-xl md:text-2xl font-bold mb-4 cursor-pointer">45% OFF on this for the first 45
+                Customers</p>
+            <button
+                class="bg-white px-4 py-2 text-sm md:text-xl rounded-md hover:bg-gray-100 transition transform hover:-translate-y-3 ">
+                Shop Now
+                <i class="fa-solid fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+       <!--Footer-->
+    <section class="bg-[#1D232C] p-10 flex flex-col gap-6 mt-3">
+        <h1 class="text-3xl md:text-5xl font-bold text-white">Nostra</h1>
+        <p class="text-xl md:text-3xl text-white">The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those intrest</p>
+        
+        <p class="text-lg text-white">@2025 Nostra.com</p>
+    </section>
+
+
+    <script src="./contact.js"></script>
+
+</body>
+
+</html>
